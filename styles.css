@@ -1,0 +1,478 @@
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+:root {
+    /* THEME COLORS */
+    --bg-main: #F4F6F8;
+    /* Platinum */
+    --bg-panel: #E8ECEF;
+    /* Cool Grey Panel */
+    --text-primary: #1B2631;
+    /* Deep Navy */
+    --text-body: #475569;
+    /* Slate Blue */
+    --accent-teal: #184E5D;
+    /* Deep Teal */
+    --font-serif: 'Domine', serif;
+    --font-sans: 'Inter', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-body);
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-serif);
+    color: var(--text-primary);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+p {
+    margin-bottom: 1.5rem;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* UTILITIES */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* --- 1. THE NEW HEADER --- */
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    position: absolute;
+    /* Sits on top of images */
+    top: 0;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 10;
+}
+
+.logo {
+    font-family: var(--font-sans);
+    color: #FFFFFF;
+    /* White on Homepage */
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.logo-suffix {
+    font-size: 0.8em;
+    font-weight: 300;
+    opacity: 0.9;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    /* Space between Home and Button */
+}
+
+/* The "Home" Link */
+.nav-text-link {
+    text-decoration: none;
+    font-family: var(--font-sans);
+    font-weight: 500;
+    color: #FFFFFF;
+    /* White on Homepage */
+    cursor: pointer;
+}
+
+/* The "View Career" Button */
+.btn-career {
+    background-color: var(--accent-teal);
+    color: #FFFFFF;
+    padding: 10px 24px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.3s;
+}
+
+.btn-career:hover {
+    background-color: #123C48;
+}
+
+/* HERO SECTION */
+.hero {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-fade {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    background: linear-gradient(to bottom, transparent, var(--bg-main));
+    z-index: 2;
+    pointer-events: none;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+    color: white;
+    max-width: 800px;
+    padding-top: 20vh;
+    text-align: left;
+    margin-left: 10%;
+}
+
+.hero-title {
+    font-size: 4rem;
+    color: #FFFFFF;
+    margin-bottom: 1rem;
+    line-height: 1.1;
+}
+
+.hero-subtitle {
+    font-family: var(--font-sans);
+    color: #E0E0E0;
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+}
+
+/* FIRM SECTION */
+.firm-section {
+    padding: 6rem 0;
+    background-color: var(--bg-main);
+}
+
+/* Shared Container Styles - Ensures both text blocks line up vertically */
+.firm-content {
+    max-width: 800px;
+    /* Or whatever width you prefer */
+    margin: 0 auto;
+    /* Keeps the block centered in the screen */
+    text-align: left;
+    /* FORCE LEFT ALIGNMENT */
+    padding: 0 20px;
+    /* Safety padding for mobile */
+}
+
+/* Shared Title Styles - Ensures fonts are identical */
+.firm-title {
+    font-family: var(--font-primary);
+    /* Deep Navy */
+    font-size: 2.5rem;
+    /* Adjust to your preference */
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--text-primary);
+}
+
+/* SECTION B BACKGROUND (Platinum) */
+.firm-section {
+    background-color: var(--bg-main);
+    /* #F4F6F8 */
+    padding: 80px 0;
+}
+
+/* SECTION C BACKGROUND (Grey Panel) */
+.founder-section {
+    background-color: var(--bg-panel);
+    /* #E8ECEF */
+    padding: 80px 0;
+    /* REMOVED: text-align: center; */
+}
+
+/* SECTION B BACKGROUND (Platinum) */
+.firm-section {
+    background-color: var(--bg-main);
+    /* #F4F6F8 */
+    padding: 80px 0;
+}
+
+/* SECTION C BACKGROUND (Grey Panel) */
+.founder-section {
+    background-color: var(--bg-panel);
+    /* #E8ECEF */
+    padding: 80px 0;
+    /* REMOVED: text-align: center; */
+}
+
+.firm-text {
+    font-size: 1.2rem;
+    color: var(--text-body);
+}
+
+/* --- 2. FOUNDER SECTION (Text Only) --- */
+.founder-section {
+    background-color: var(--bg-panel);
+    /* Cool Grey Panel */
+    padding: 80px 20px;
+    text-align: center;
+    /* Center the text */
+}
+
+.founder-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.founder-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+/* CAREER PAGE */
+.career-header {
+    padding: 6rem 0 4rem;
+    text-align: center;
+}
+
+.career-title {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.career-subtitle {
+    font-size: 1.25rem;
+    color: var(--text-body);
+}
+
+.internship-card {
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+    padding: 3rem;
+    max-width: 800px;
+    margin: 0 auto 6rem;
+}
+
+.role-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+}
+
+.role-hook {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    font-style: italic;
+}
+
+.responsibilities-list {
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+.responsibilities-list li {
+    margin-bottom: 1rem;
+    padding-left: 2rem;
+    position: relative;
+}
+
+.responsibilities-list li::before {
+    content: "✓";
+    color: var(--accent-teal);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.requirements-section {
+    margin-bottom: 2rem;
+}
+
+.requirements-title {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+/* --- 3. CAREER EMAIL LINK --- */
+.apply-instruction {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #E2E8F0;
+    /* Thin separator line */
+    font-family: var(--font-sans);
+    font-size: 1.1em;
+    color: var(--text-primary);
+}
+
+.email-link {
+    color: var(--accent-teal);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.email-link:hover {
+    text-decoration: underline;
+}
+
+/* --- 4. PAGE SPECIFIC OVERRIDES --- */
+/* Use this class for the Career Page body so the header text is dark */
+.career-page .header-nav .logo,
+.career-page .header-nav .nav-text-link {
+    color: var(--text-primary);
+    /* Dark text on light background */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-content {
+        margin-left: 2rem;
+        padding-top: 15vh;
+    }
+}
+
+/* --- HAMBURGER MENU STYLES --- */
+
+/* 1. Default Style (Desktop): Hide the hamburger */
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    /* Default bar color (White for Homepage) */
+    background-color: #FFFFFF;
+}
+
+/* 2. Mobile Styles (Only triggers on screens smaller than 768px) */
+@media (max-width: 768px) {
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-content {
+        margin-left: 2rem;
+        padding-top: 15vh;
+    }
+
+    /* Show the Hamburger */
+    .hamburger {
+        display: block;
+        z-index: 20;
+    }
+
+    /* Hide the default row of links and prepare the dropdown */
+    .nav-links {
+        position: fixed;
+        left: -100%;
+        top: 0;
+        flex-direction: column;
+        background-color: var(--text-primary);
+        /* Deep Navy Background */
+        width: 100%;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        transition: 0.3s;
+        gap: 40px;
+        z-index: 15;
+    }
+
+    .nav-links.active {
+        left: 0;
+    }
+
+    /* Adjust Link Styles for Mobile */
+    .nav-text-link {
+        font-size: 1.5rem;
+        color: #FFFFFF;
+        margin-bottom: 20px;
+    }
+
+    /* --- THE FIX IS HERE --- */
+    /* This forces the "Home" link to be WHITE on mobile, 
+       even if we are on the Career Page */
+    .career-page .header-nav .nav-text-link {
+        color: #FFFFFF !important;
+    }
+
+    /* Make the button look good on mobile */
+    .btn-career {
+        display: block;
+        width: 80%;
+        /* Wider button for phone */
+        text-align: center;
+    }
+
+    /* Animation for Hamburger */
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+/* 3. Page Specific Color Override */
+/* On the Career Page (White Background), the hamburger bars need to be dark */
+.career-page .bar {
+    background-color: var(--text-primary);
+}
+
+/* But when the menu opens (Navy background), turn bars back to white so we can see them */
+.career-page .hamburger.active .bar {
+    background-color: #FFFFFF;
+}

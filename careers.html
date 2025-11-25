@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers | QuantAlpha LLP</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="career-page">
+
+    <!-- HEADER NAVIGATION -->
+    <nav class="header-nav">
+        <div class="logo">QuantAlpha <span class="logo-suffix">LLP</span></div>
+
+        <!-- The 3-Line Icon (Hidden on Desktop, Visible on Mobile) -->
+        <div class="hamburger" id="hamburger-btn">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <!-- The Links -->
+        <div class="nav-links" id="nav-menu">
+            <a href="index.html" class="nav-text-link">Home</a>
+            <a href="careers.html" class="btn-career">View Career</a>
+        </div>
+    </nav>
+
+    <!-- SECTION A: HEADER -->
+    <header class="career-header">
+        <div class="container">
+            <h1 class="career-title">Shape Our Edge.</h1>
+            <p class="career-subtitle">Seeking independent thinkers for a rigorous 6-month quantitative internship.</p>
+        </div>
+    </header>
+
+    <!-- SECTION B: INTERNSHIP CARD -->
+    <section class="container">
+        <div class="internship-card">
+            <h2 class="role-title">Quantitative Developer Intern</h2>
+            <p class="role-hook">
+                "This is not a coffee-fetching internship. You will touch production code, manage SQL databases, and
+                refine the backtesting engine that drives our capital."
+            </p>
+
+            <ul class="responsibilities-list">
+                <li>Backtest strategies in Python (Pandas/NumPy).</li>
+                <li>Read rigorous academic papers and implement insights.</li>
+                <li>Maintain financial databases (SQL).</li>
+            </ul>
+
+            <div class="requirements-section">
+                <h3 class="requirements-title">Requirements:</h3>
+                <ul style="list-style-type: disc; padding-left: 1.5rem; margin-bottom: 2rem; color: var(--text-body);">
+                    <li>CS/ML/Math/Stats degree.</li>
+                    <li>Passion for markets (Personal trading experience preferred).</li>
+                </ul>
+            </div>
+
+            <!-- THE NEW CLOSING SECTION -->
+            <div class="apply-instruction">
+                <p>
+                    If you are a fast learner with relentless initiative, strong problem-solving skills,
+                    and a burning passion for trading or quantitative finance—we want to hear from you.
+                </p>
+
+                <p class="send-text">
+                    Send your resume and cover letter to:
+                </p>
+
+                <a href="mailto:quantalpha101@gmail.com" class="email-link">quantalpha101@gmail.com</a>
+            </div>
+        </div>
+    </section>
+    <script>
+        const hamburger = document.getElementById('hamburger-btn');
+        const navMenu = document.getElementById('nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            // Toggle the .active class on the hamburger and the menu
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Optional: Close menu when a link is clicked
+        document.querySelectorAll('.nav-links a').forEach(n => n.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        }));
+    </script>
+</body>
+
+</html>

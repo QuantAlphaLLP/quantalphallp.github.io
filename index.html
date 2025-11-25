@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuantAlpha LLP | Market Wisdom, Encoded</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- SECTION A: THE HERO -->
+    <header class="hero">
+        <div class="hero-background">
+            <img src="assets/mountain.jpeg" alt="Mountain Range" class="hero-image">
+        </div>
+        <div class="hero-fade"></div>
+
+        <!-- HEADER NAVIGATION -->
+        <nav class="header-nav">
+            <div class="logo">QuantAlpha <span class="logo-suffix">LLP</span></div>
+
+            <!-- The 3-Line Icon (Hidden on Desktop, Visible on Mobile) -->
+            <div class="hamburger" id="hamburger-btn">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <!-- The Links -->
+            <div class="nav-links" id="nav-menu">
+                <a href="index.html" class="nav-text-link">Home</a>
+                <a href="careers.html" class="btn-career">View Career</a>
+            </div>
+        </nav>
+
+        <div class="container hero-content">
+            <h1 class="hero-title">Decoding Chaos.</h1>
+            <p class="hero-subtitle">The relentless pursuit of absolute truth in a world of uncertainty.</p>
+        </div>
+    </header>
+
+    <!-- SECTION B: THE FIRM -->
+    <section class="firm-section">
+        <div class="container firm-content">
+            <h2 class="firm-title">Beyond Speculation.</h2>
+            <p class="firm-text">
+                We leverage rigorous statistical modeling and machine learning to uncover hidden patterns and profitable
+                opportunities in the Stock and Crypto markets.
+            </p>
+        </div>
+    </section>
+
+    <!-- SECTION C: THE FOUNDER -->
+    <section class="founder-section">
+        <!-- CHANGE 1: Use "container firm-content" here so it aligns perfectly left -->
+        <div class="container firm-content">
+            <!-- CHANGE 2: Use "firm-title" here so the Font and Size are identical -->
+            <h2 class="firm-title">Built on Resilience.</h2>
+            <p class="firm-text">
+                Led by a co-founder of Quadhill Capital. With over 13 years of practical
+                experience navigating bull runs and bear markets, we combine the intuition of a veteran trader with the
+                rigour of a data scientist.
+            </p>
+        </div>
+    </section>
+    <script>
+        const hamburger = document.getElementById('hamburger-btn');
+        const navMenu = document.getElementById('nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            // Toggle the .active class on the hamburger and the menu
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Optional: Close menu when a link is clicked
+        document.querySelectorAll('.nav-links a').forEach(n => n.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        }));
+    </script>
+</body>
+
+</html>
